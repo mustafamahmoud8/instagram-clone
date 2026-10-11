@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "rewrites": [
     { "source": "/feed", "destination": "/Home-page/Home.html" },
     { "source": "/profile", "destination": "/profile-page/profile.html" },
