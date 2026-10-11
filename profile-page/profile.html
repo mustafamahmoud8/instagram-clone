@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Profile &bull; Instagram</title>
+  <meta name="description" content="Instagram User Profile" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="icon"
+    sizes="192x192"
+    href="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="profile.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../Jquery-file/jquery-3.1.1.js"></script>
+  <script defer src="../helper/Ajax.js" type="module"></script>
+  <script defer src="profile.js" type="module"></script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="profile__header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="profile__logo">
+        <a href="../Home-page/Home.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="Instagram logo" />
+        </a>
+      </div>
+
+      <div class="profile__settings">
+        <button onclick="location.href='../Home-page/Home.html'" title="Home">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z" stroke-width="2"></path>
+          </svg>
+        </button>
+
+        <button id="theme-toggle-profile-btn" title="Toggle Dark/Light Mode">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-width="2"></path>
+          </svg>
+        </button>
+
+        <button onclick="location.href='../Home-page/Home.html'" title="Create Post">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+            <line x1="12" y1="8" x2="12" y2="16" stroke-width="2"></line>
+            <line x1="8" y1="12" x2="16" y2="12" stroke-width="2"></line>
+          </svg>
+        </button>
+
+        <button onclick="location.href='../login-page/login.html'" title="Switch / Log out">
+          <img id="image-container" src="../photos/mustafa.jpg" alt="User avatar" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Profile Content Container -->
+  <main class="profile">
+    <section class="profile__profile">
+      <div class="container">
+        <!-- Avatar with Story Ring -->
+        <div class="profile__profile__logo">
+          <div class="profile-avatar-wrapper" id="profile-avatar-wrapper" title="Change profile picture">
+            <img id="profile-picture" src="../photos/mustafa.jpg" alt="Profile" />
+          </div>
+        </div>
+
+        <!-- Details, Username & Stats -->
+        <div class="profile__profile__details">
+          <div class="profile__profile__details__userName">
+            <h4 id="fullname">mustafa</h4>
+            <button class="edit-profile-btn" id="edit-profile-btn">Edit Profile</button>
+            <button class="gear-settings-btn" id="gear-settings-btn" title="Settings">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" stroke-width="2"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Interactive Counters -->
+          <div class="profile__profile__details__follower">
+            <span class="profile-stat-item"><b id="posts-count">10</b> posts</span>
+            <button class="profile-stat-item" id="followers-btn"><b>432</b> followers</button>
+            <button class="profile-stat-item" id="following-btn"><b>289</b> following</button>
+          </div>
+
+          <!-- Bio -->
+          <div class="profile-bio-section">
+            <h6 id="Username">Mustafa Mahmoud</h6>
+            <p class="profile-bio-text" id="user-bio">Creating visual stories & software experiences 🚀📸
+Exploring code, design & coffee ☕</p>
+            <a href="https://github.com" target="_blank" class="profile-bio-link" id="user-link">github.com/mustafa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Tabs -->
+    <div class="profile__section__tab">
+      <button class="tablinks active" id="defaultOpen" onclick="openSection(event, 'Posts')">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" stroke-width="2"></rect>
+          <line x1="9" y1="3" x2="9" y2="21" stroke-width="2"></line>
+          <line x1="15" y1="3" x2="15" y2="21" stroke-width="2"></line>
+          <line x1="21" y1="9" x2="3" y2="9" stroke-width="2"></line>
+          <line x1="21" y1="15" x2="3" y2="15" stroke-width="2"></line>
+        </svg>
+        Posts
+      </button>
+
+      <button class="tablinks" onclick="openSection(event, 'Saved')">
+        <svg viewBox="0 0 24 24">
+          <polygon points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke-width="2"></polygon>
+        </svg>
+        Saved
+      </button>
+
+      <button class="tablinks" onclick="openSection(event, 'Tagged')">
+        <svg viewBox="0 0 24 24">
+          <path d="M10.2 3.8L12 2l1.8 1.8a1.6 1.6 0 0 0 1.1.5h5.3A1.8 1.8 0 0 1 22 6.1v14.1a1.8 1.8 0 0 1-1.8 1.8H3.8A1.8 1.8 0 0 1 2 20.2V6.1A1.8 1.8 0 0 1 3.8 4.3h5.3a1.6 1.6 0 0 0 1.1-.5z" stroke-width="2"></path>
+          <circle cx="12" cy="11" r="3.5" stroke-width="2"></circle>
+        </svg>
+        Tagged
+      </button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="Posts" class="profile__section__tab__tabcontent" style="display: block;">
+      <div class="profile-grid" id="profile-grid-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <div id="Saved" class="profile__section__tab__tabcontent">
+      <div class="profile-grid" id="saved-grid-container">
+        <!-- Rendered dynamically from saved posts -->
+      </div>
+    </div>
+
+    <div id="Tagged" class="profile__section__tab__tabcontent" style="text-align: center; padding: 60px 20px; color: var(--text-secondary);">
+      <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5" style="margin-bottom: 14px;">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+      <h5>Photos of you</h5>
+      <p style="font-size: 13px;">When people tag you in photos and videos, they'll appear here.</p>
+    </div>
+  </main>
+
+  <!-- Edit Profile Modal -->
+  <div class="modal-custom" id="edit-profile-modal">
+    <div class="modal-content-card">
+      <div class="modal-card-header">
+        <h5>Edit Profile</h5>
+        <button id="close-edit-modal-btn">&times;</button>
+      </div>
+      <div class="modal-card-body">
+        <form id="edit-profile-form">
+          <div class="edit-form-group">
+            <label>Name</label>
+            <input type="text" id="edit-fullname-input" required />
+          </div>
+          <div class="edit-form-group">
+            <label>Username</label>
+            <input type="text" id="edit-username-input" required />
+          </div>
+          <div class="edit-form-group">
+            <label>Bio</label>
+            <textarea id="edit-bio-input"></textarea>
+          </div>
+          <div class="edit-form-group">
+            <label>Profile Picture URL / Path</label>
+            <input type="text" id="edit-avatar-input" placeholder="../photos/mustafa.jpg or https://..." />
+          </div>
+          <button type="submit" class="save-profile-btn">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Followers / Following Modal -->
+  <div class="modal-custom" id="users-list-modal">
+    <div class="modal-content-card">
+      <div class="modal-card-header">
+        <h5 id="users-modal-title">Followers</h5>
+        <button id="close-users-modal-btn">&times;</button>
+      </div>
+      <div class="modal-card-body" id="users-modal-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="style.js"></script>
+</body>
+</html>

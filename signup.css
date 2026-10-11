@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+  }
+  
+  body {
+    background-color: #fafafa;
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .wrapper {
+    margin-top: 2rem;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left {
+    position: relative;
+  }
+  
+  .screen {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+  }
+  
+  .panel {
+    width: 350px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    padding: 20px 40px;
+    margin: 5px 0;
+    display: flex;
+  }
+  
+  .login {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #logo {
+    width: 65%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fafafa;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+
+  }
+  
+  .input-box::placeholder {
+    color: #8a8a8a;
+    font-size: 12px;
+  }
+  
+  .input-box:focus {
+    outline: none;
+    border: 1px solid #8a8a8a;
+  }
+  
+  .button {
+    width: 100%;
+    margin: 12px 0;
+    padding: 8px 0;
+    background-color: #0095f6;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  .button:hover {
+    background-color: #1877f2;
+  }
+  .button:active {
+    transform: scale(0.98);
+  }
+  
+  .divider {
+    display: flex;
+    width: 100%;
+    font-size: 12px;
+    color: #8a8a8a;
+    font-weight: bold;
+    gap: 20px;
+    align-items: center;
+  }
+  .or{
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+  
+  .line {
+    flex: 1;
+    height: 1px;
+    background-color: #8a8a8a;
+  }
+  
+  .fb {
+    margin: 20px 0;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .fb::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f082";
+    margin-right: 5px;
+    font-size: 18px;
+  }
+  
+  .forgot {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .signup {
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .signup a {
+    color: #3bb1ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .apps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  
+  .app-stores {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .app-stores img {
+    width: 140px;
+    height: auto;
+  }
+  
+  footer {
+    max-width: 35em;
+    margin-bottom: 40px;
+  }
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+    list-style: none;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  li, a {
+    color: #8a8a8a;
+    text-decoration: none;
+  }
+  .instagram-photo{
+    height: 600px;
+    margin-top: -5rem;
+    margin-right: 2rem;
+    transition: opacity 1s ease-in-out;
+
+  }
+
+  .instagram-photo.hide {
+    opacity: 0.5;
+  }
+   .span-name, .span-Email, .span-Username, .span-Password {
+     color: #ed4956;
+     font-size: 0.75rem;
+     width: 100%;
+     text-align: left;
+     margin-top: 3px;
+     margin-bottom: 2px;
+   }
+   .failed {
+    border: 1px solid red;
+
+   }
+   .success{
+    border: 1px solid #3b5998;
+
+   }
+  
+  @media (max-width: 860px) {
+    .left {
+      display: none;
+    }
+  }

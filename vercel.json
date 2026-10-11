@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/feed", "destination": "/Home-page/Home.html" },
+    { "source": "/profile", "destination": "/profile-page/profile.html" },
+    { "source": "/login", "destination": "/login-page/login.html" },
+    { "source": "/signup", "destination": "/index.html" }
+  ]
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Instagram - Sign up</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="./styles.css" /> -->
+    <link
+      data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png"
+      rel="icon"
+      sizes="192x192"
+      href="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5b938571dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="signup.css">
+    <link href="bootstrap-5.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./Jquery-file/jquery-3.1.1.js"></script>
+
+    
+</head>
+<body>
+
+    <section class="wrapper">
+        <div class="left">
+          <img src="sign-photos/instaone.png" alt="phone" class="instagram-photo">
+        </div>
+        <div class="right">
+          <div class="panel login">
+            <img id="logo" src="images/instagram-logo.png" alt="logo">
+            <form id="signup-form">
+              <input
+                class="input-box"
+                type="text"
+                id="EmailSignupId"
+                name="EmailSignup"
+                required
+                placeholder="Mobile Number or Email">
+                <span class="span-Email" style="display: none;">Enter a valid email or phone number</span>
+              <input
+                class="input-box"
+                type="text"
+                id="FullnSignupId"
+                name="fullnsignup"
+                required
+                placeholder="Full Name">
+                <span class="span-name" style="display: none;">Enter your full name</span>
+              <input
+                class="input-box"
+                type="text"
+                id="UsrSignupId"
+                name="UsrSignup"
+                required
+                placeholder="Username">
+                <span class="span-Username" style="display: none;">Username must be at least 3 characters</span>
+              <div style="position: relative; width: 100%;">
+                <input
+                  class="input-box"
+                  type="password"
+                  required
+                  id="PwSignupId"
+                  name="PwSignup"
+                  placeholder="Password">
+                <button type="button" id="toggle-pw-signup" style="position: absolute; right: 10px; top: 55%; transform: translateY(-50%); background: none; border: none; font-size: 13px; font-weight: 600; color: #262626; cursor: pointer; padding: 0;">Show</button>
+              </div>
+              <span class="span-Password" style="display: none;">Password must be at least 6 characters</span>
+              <label for="imageInput" style="font-size: 12px; color: #8a8a8a; margin-top: 8px; width: 100%; text-align: left;">Upload Profile Picture (Optional):</label>
+              <input
+                class="input-box"
+                accept="image/*"
+                type="file"
+                id="imageInput">
+                    <!-- <span class="span-Password" style="display: none;">password is not valid</span> -->
+  
+              <input
+                class="button"
+                type="submit"
+                name="signup"
+                value="Sign up">
+              <div class="divider">
+                <div class="line"></div>
+                <p class="or">OR</p>
+                <div class="line"></div>
+              </div>
+              <a class="fb" href=#>Log in with Facebook</a>
+              <a class="forgot" href=#>Forgot password?</a>
+            </form>
+          </div>
+          <div class="panel signup">
+            <p>have an account?</p>
+            <a href="login-page/login.html">Log in</a>
+          </div>
+          <div class="apps">
+            <p>Get the app.</p>
+            <div class="app-stores">
+              <img src="images/app-store.svg" alt="App Store">
+              <img src="images/play-store.svg" alt="Play Store">
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <ul>
+          <li><a href=#>About</a></li>
+          <li><a href=#>Blog</a></li>
+          <li><a href=#>Jobs</a></li>
+          <li><a href=#>Help</a></li>
+          <li><a href=#>API</a></li>
+          <li><a href=#>Privacy</a></li>
+          <li><a href=#>Terms</a></li>
+          <li><a href=#>Top Accounts</a></li>
+          <li><a href=#>Hashtags</a></li>
+          <li><a href=#>Locations</a></li>
+          <li><a href=#>Instagram Lite</a></li>
+          <li><a href=#>Beauty</a></li>
+          <li><a href=#>Dance</a></li>
+          <li><a href=#>Fitness</a></li>
+          <li><a href=#>Food & Drink</a></li>
+          <li><a href=#>Home & Garden</a></li>
+          <li><a href=#>Music</a></li>
+          <li><a href=#>Visual Arts</a></li>
+        </ul>
+        <ul>
+          <li>English</li>
+          <li>&copy; 2023 Instagram from Metadata</li>
+        </ul>
+      </footer>
+      <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="signup.js"></script>
+</body>
+</html>

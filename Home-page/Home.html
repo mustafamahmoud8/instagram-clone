@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Instagram</title>
+  <meta name="description" content="Instagram Web Experience" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="icon"
+    sizes="192x192"
+    href="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../Jquery-file/jquery-3.1.1.js"></script>
+  <script defer src="../helper/Ajax.js" type="module"></script>
+  <script defer src="home.js" type="module"></script>
+</head>
+<body>
+
+  <!-- Left Sidebar Navigation -->
+  <aside id="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-logo-container">
+        <a href="Home.html">
+          <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="Instagram logo" />
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="sidebar-links">
+        <a href="Home.html" class="sidebar-link active" id="nav-home">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <div class="sidebar-link" id="nav-search-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke-width="2"></path>
+            <line x1="16.511" y1="16.511" x2="22" y2="22" stroke-width="2"></line>
+          </svg>
+          <span>Search</span>
+        </div>
+
+        <a href="javascript:void(0)" class="sidebar-link" id="nav-explore-btn">
+          <svg viewBox="0 0 24 24">
+            <polygon points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" stroke-width="2"></polygon>
+            <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
+          </svg>
+          <span>Explore</span>
+        </a>
+
+        <a href="javascript:void(0)" class="sidebar-link" id="nav-reels-btn">
+          <svg viewBox="0 0 24 24">
+            <line x1="2.05" y1="7" x2="21.95" y2="7" stroke-width="2"></line>
+            <path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" stroke-width="2"></path>
+            <polygon points="9.76 11.63 14.3 14.25 9.76 16.87 9.76 11.63" fill="currentColor"></polygon>
+          </svg>
+          <span>Reels</span>
+        </a>
+
+        <a href="javascript:void(0)" class="sidebar-link" id="nav-messages-btn">
+          <svg viewBox="0 0 24 24">
+            <line x1="22" y1="2" x2="9.2" y2="10.1" stroke-width="2"></line>
+            <polygon points="11.7 20.3 22 3 2 3 9.2 10.1 11.7 20.3" stroke-width="2"></polygon>
+          </svg>
+          <span>Messages</span>
+        </a>
+
+        <div class="sidebar-link" id="nav-notifications-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z" stroke-width="2"></path>
+          </svg>
+          <span>Notifications</span>
+          <span class="badge-count" id="notif-badge">3</span>
+        </div>
+
+        <div class="sidebar-link" id="nav-create-btn">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+            <line x1="12" y1="8" x2="12" y2="16" stroke-width="2"></line>
+            <line x1="8" y1="12" x2="16" y2="12" stroke-width="2"></line>
+          </svg>
+          <span>Create</span>
+        </div>
+
+        <a href="../profile-page/profile.html" class="sidebar-link" id="nav-profile">
+          <img class="sidebar-profile-img" id="profile-image-navbar" src="../photos/mustafa.jpg" alt="Profile" />
+          <span id="nav-profile-name">Profile</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Sidebar Bottom: Theme Toggle & More -->
+    <div class="sidebar-bottom">
+      <div class="more-dropdown" id="more-dropdown-menu">
+        <div class="more-dropdown-item" id="theme-toggle-btn">
+          <span>Dark Mode</span>
+          <svg id="theme-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+        <div class="more-dropdown-item" onclick="location.href='../profile-page/profile.html'">
+          <span>Saved Posts</span>
+          <i data-feather="bookmark" style="width: 16px; height: 16px;"></i>
+        </div>
+        <div class="more-dropdown-divider"></div>
+        <div class="more-dropdown-item" onclick="location.href='../login-page/login.html'">
+          <span>Switch Accounts</span>
+          <i data-feather="users" style="width: 16px; height: 16px;"></i>
+        </div>
+        <div class="more-dropdown-item" id="logout-btn" style="color: var(--like-color);">
+          <span>Log out</span>
+          <i data-feather="log-out" style="width: 16px; height: 16px; stroke: var(--like-color);"></i>
+        </div>
+      </div>
+
+      <div class="sidebar-link" id="nav-more-btn">
+        <svg viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6" stroke-width="2"></line>
+          <line x1="3" y1="12" x2="21" y2="12" stroke-width="2"></line>
+          <line x1="3" y1="18" x2="21" y2="18" stroke-width="2"></line>
+        </svg>
+        <span>More</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Search Drawer -->
+  <div class="side-drawer" id="search-drawer">
+    <div class="drawer-header">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Search</h3>
+        <button id="close-search-btn" style="background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-primary);">&times;</button>
+      </div>
+      <div class="drawer-search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search users by name or handle..." />
+      </div>
+    </div>
+    <div class="drawer-content" id="search-results-list">
+      <!-- Search items rendered dynamically -->
+    </div>
+  </div>
+
+  <!-- Notifications Drawer -->
+  <div class="side-drawer" id="notifications-drawer">
+    <div class="drawer-header">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Notifications</h3>
+        <button id="close-notif-btn" style="background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-primary);">&times;</button>
+      </div>
+    </div>
+    <div class="drawer-content" id="notifications-list">
+      <div class="notification-item">
+        <img src="../photos/one.jfif" alt="User" />
+        <div class="search-result-info">
+          <p style="margin: 0; font-size: 13px;"><strong>Mahmoud Ezzat</strong> liked your post. <span style="color: var(--text-secondary); font-size: 11.5px;">2h</span></p>
+        </div>
+      </div>
+      <div class="notification-item">
+        <img src="../photos/nest.png" alt="User" />
+        <div class="search-result-info">
+          <p style="margin: 0; font-size: 13px;"><strong>Mohamed Shaker</strong> started following you. <span style="color: var(--text-secondary); font-size: 11.5px;">5h</span></p>
+        </div>
+      </div>
+      <div class="notification-item">
+        <img src="../photos/three.jfif" alt="User" />
+        <div class="search-result-info">
+          <p style="margin: 0; font-size: 13px;"><strong>Mohamed Nasr</strong> commented: "Incredible shot! 🔥" <span style="color: var(--text-secondary); font-size: 11.5px;">1d</span></p>
+        </div>
+      </div>
+      <div class="notification-item">
+        <img src="../photos/nine.jfif" alt="User" />
+        <div class="search-result-info">
+          <p style="margin: 0; font-size: 13px;"><strong>Elon Mask</strong> mentioned you in a comment. <span style="color: var(--text-secondary); font-size: 11.5px;">2d</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Wrapper -->
+  <main class="app-wrapper">
+    <!-- Center Feed -->
+    <section class="feed-section">
+      <!-- Stories Bar -->
+      <div id="stories-container">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Posts Feed Container -->
+      <div class="post-container" id="post-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- Right Sidebar (Profile & Suggestions) -->
+    <aside class="sidebar-right">
+      <div class="right-current-user">
+        <div class="user-profile-left" onclick="location.href='../profile-page/profile.html'">
+          <img id="image-profile-container" src="../photos/mustafa.jpg" alt="Avatar" />
+          <div class="user-profile-info" id="UserNameDetails">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+        <button class="switch-account-btn" onclick="location.href='../login-page/login.html'">Switch</button>
+      </div>
+
+      <div class="suggestions-header">
+        <span>Suggested for you</span>
+        <a href="javascript:void(0)" id="see-all-suggestions">See All</a>
+      </div>
+
+      <div class="suggestions-list" id="profile-div">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <footer class="footer-links">
+        <a href="#">About</a> &middot;
+        <a href="#">Help</a> &middot;
+        <a href="#">Press</a> &middot;
+        <a href="#">API</a> &middot;
+        <a href="#">Jobs</a> &middot;
+        <a href="#">Privacy</a> &middot;
+        <a href="#">Terms</a> &middot;
+        <a href="#">Locations</a> &middot;
+        <a href="#">Language</a>
+        <div class="footer-copyright">&copy; 2026 INSTAGRAM FROM META</div>
+      </footer>
+    </aside>
+  </main>
+
+  <!-- Create New Post Modal -->
+  <div class="modal-backdrop-custom" id="create-post-modal">
+    <div class="create-post-card">
+      <div class="modal-header-custom">
+        <button class="close-modal-btn" id="close-create-post-btn">&times;</button>
+        <h5>Create new post</h5>
+        <button class="share-btn" id="share-post-btn">Share</button>
+      </div>
+      <div class="create-post-body">
+        <div class="create-post-left">
+          <div class="upload-dropzone" id="upload-dropzone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <p style="font-size: 15px; font-weight: 500; margin: 0; color: var(--text-primary);">Drag photos here or select from computer</p>
+            <input type="file" id="new-post-file-input" accept="image/*" style="display: none;" />
+            <button class="upload-btn" onclick="document.getElementById('new-post-file-input').click()">Select from computer</button>
+            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 6px;">
+              Or pick a sample photo:
+              <select id="sample-photo-select" style="font-size: 12px; margin-top: 4px; padding: 2px 6px; border-radius: 4px; background: var(--input-bg); color: var(--text-primary); border: 1px solid var(--border-color);">
+                <option value="">-- Choose sample --</option>
+                <option value="../main-photos/main-one.jpg">Sample 1: Nature</option>
+                <option value="../main-photos/main-two.jpg">Sample 2: Urban</option>
+                <option value="../main-photos/main-three.jpg">Sample 3: Art</option>
+                <option value="../main-photos/main-four.jpg">Sample 4: Sunset</option>
+                <option value="../main-photos/main-five.jpg">Sample 5: Minimal</option>
+              </select>
+            </div>
+          </div>
+          <img class="create-preview-img" id="create-preview-img" alt="Preview" />
+        </div>
+        <div class="create-post-right">
+          <div class="create-author-header">
+            <img id="create-author-avatar" src="../photos/mustafa.jpg" alt="Author" />
+            <strong id="create-author-username" style="font-size: 14px;">mustafa</strong>
+          </div>
+          <textarea class="create-caption-input" id="create-caption-input" placeholder="Write a caption... (e.g. Beautiful day! #vibes)"></textarea>
+
+          <div class="create-filters-bar">
+            <label>Photo Filters:</label>
+            <div class="filters-pills">
+              <span class="filter-pill active" data-filter="none">Normal</span>
+              <span class="filter-pill" data-filter="filter-clarendon">Clarendon</span>
+              <span class="filter-pill" data-filter="filter-gingham">Gingham</span>
+              <span class="filter-pill" data-filter="filter-moon">Moon (B&W)</span>
+              <span class="filter-pill" data-filter="filter-lark">Lark</span>
+              <span class="filter-pill" data-filter="filter-reyes">Reyes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Viewer Fullscreen Modal -->
+  <div id="story-modal-view">
+    <div class="story-viewer-card">
+      <div class="story-progress-bar-container" id="story-progress-bars">
+        <div class="story-progress-bar"><div class="story-progress-fill" id="story-fill-0"></div></div>
+      </div>
+      <div class="story-viewer-header">
+        <img id="story-user-avatar" src="" alt="User" />
+        <div class="story-viewer-user-info">
+          <span id="story-user-name">Username</span>
+          <span class="story-viewer-time" id="story-time">2h</span>
+        </div>
+        <button class="story-close-btn" id="close-story-modal-btn">&times;</button>
+      </div>
+
+      <img class="story-media-view" id="story-media-img" src="" alt="Story media" />
+
+      <button class="story-nav-btn story-nav-prev" id="story-prev-btn">&#10094;</button>
+      <button class="story-nav-btn story-nav-next" id="story-next-btn">&#10095;</button>
+
+      <div class="story-bottom-reply">
+        <input type="text" placeholder="Reply to story..." id="story-reply-input" />
+        <button class="icon-btn" id="story-like-btn" style="color: white;">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="white" fill="none">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav id="bottom-navbar">
+    <a href="Home.html" class="bottom-nav-link" title="Home">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path>
+      </svg>
+    </a>
+    <div class="bottom-nav-link" id="mobile-search-btn" title="Search">
+      <svg viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"></line>
+      </svg>
+    </div>
+    <div class="bottom-nav-link" id="mobile-create-btn" title="Create">
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+        <line x1="12" y1="8" x2="12" y2="16" stroke-width="2"></line>
+        <line x1="8" y1="12" x2="16" y2="12" stroke-width="2"></line>
+      </svg>
+    </div>
+    <div class="bottom-nav-link" id="mobile-reels-btn" title="Reels">
+      <svg viewBox="0 0 24 24">
+        <line x1="2" y1="7" x2="22" y2="7" stroke-width="2"></line>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+      </svg>
+    </div>
+    <a href="../profile-page/profile.html" class="bottom-nav-link" title="Profile">
+      <img id="image-bottom-navbar" src="../photos/mustafa.jpg" style="width: 26px; height: 26px; border-radius: 50%; object-fit: cover;" alt="Profile" />
+    </a>
+  </nav>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+</body>
+</html>

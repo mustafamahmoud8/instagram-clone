@@ -1,0 +1,17 @@
+{
+  "name": "instagram-clone",
+  "version": "1.0.0",
+  "description": "Instagram Clone web application with signup, login, feed, stories, and profile.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "instagram",
+    "clone",
+    "javascript",
+    "bootstrap"
+  ],
+  "author": "",
+  "license": "ISC"
+}
